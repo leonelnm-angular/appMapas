@@ -13,18 +13,25 @@ import { AgmCoreModule } from '@agm/core';
 
 // Componentes
 import { MapaComponent } from './components/mapa/mapa.component';
+import { EditMarcadorComponent } from './components/mapa/edit-marcador.component';
 
-
+// Reactive Foms
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
+  entryComponents: [
+    EditMarcadorComponent
+  ],
   declarations: [
     AppComponent,
-    MapaComponent
+    MapaComponent,
+    EditMarcadorComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDwgiNVBbRSzEBSvmbXP9QLcSprC9VHp7M'
     })
